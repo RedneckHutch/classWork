@@ -1,0 +1,41 @@
+# Houston Hutchison
+# a00519572
+import random
+
+# varibles
+count = 0
+moneyHolder = 0
+# gets money user wanting to bet
+money = int(input("How many dollars do you have to start?: "))
+print("")
+# holders for maxs
+moneyHolder = money
+countHolder = count
+# rolls/checks/win or loss/output if win or loss
+while money > 0:
+    guess = int(input("Input a number 2-12:"))
+    while guess > 12 or guess < 2:
+        print("You entered a number out side of 2-12.")
+        print(" ")
+        guess = int(input("Input a number 2-12: \t"))
+    # print ("You entered", guess)
+    dice1 = random.randint(1, 6)  # rolling the dice
+    dice2 = random.randint(1, 6)  # rolling dice number 2
+    print("The computer rolled", dice1 + dice2, "\t", end=" ")
+    if guess == dice1 + dice2:
+        count += 1
+        money += 3
+
+        print("You have $", money, " dollars available. You win!")
+    else:
+        count += 1
+        money -= 1
+        print("You have $", money, " dollars available.")
+
+    # sets new maxes if new ones come up after the program has ran
+    print("You broke after", count, "rolls")
+    if money > moneyHolder:
+        moneyHolder = money
+        # print("if tester",moneyHolder)
+        countHolder = count
+print("You should have quit after", countHolder, "rolls when you had $", moneyHolder)

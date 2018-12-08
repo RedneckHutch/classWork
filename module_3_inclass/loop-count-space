@@ -1,0 +1,6 @@
+name = "My name is Sam"
+count = 0
+for oneChar in name:
+    if oneChar == " ":
+        count 1+=1
+print ("There are ", count, "spaces in", name)

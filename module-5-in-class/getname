@@ -1,0 +1,18 @@
+
+
+def getName():
+    name = input ("Please enter your name: ")
+    return name
+
+def getAge():
+    age = input ("Please enter your age: ")
+    return age
+
+def getState():
+    state = input ("Please enter the state: ")
+    return state
+
+def getZip():
+    zip = input ("please enter your zip code: ")
+    return zip
+

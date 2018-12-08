@@ -1,0 +1,17 @@
+#ask users to enter months as int
+#ask the users for days in ints
+#asks the use to enter a 2 digit year as int
+#muliply day by month if it = year say amazing date else just a regular date
+
+#Get the data
+month = int(input("Please enter the month(1-12): "))
+day = int(input("Please enter the day(1-31): "))
+year = int(input("Please enter the year as a two digits: "))
+
+#calculation/Decisions
+checkDate = month * day
+
+if checkDate==year:
+    print("Amazing Date")
+else:
+    print ("Just a Regular Date")

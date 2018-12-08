@@ -1,0 +1,11 @@
+days_collecting = int (input("How many days were spent collecting bottles? "))
+
+total_collected=0
+for number_days in range (1,days_collecting+1):
+    print ("Please enter the number of bottles collected on day"+ str (number_days)+ str(": "),end = "")
+    bottles= int(input (""))
+    total_collected = total_collected + bottles
+
+avg =total_collected / days_collecting
+print ("You collected "+ str (total_collected), "bottles over " + str (days_collecting), "days.")
+print (avg, "is the average number of bottles you collected per day.")
